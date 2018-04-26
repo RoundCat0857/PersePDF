@@ -52,7 +52,7 @@ for page in pages:
     for l in layout:
     #     print(l) # l is object
         if isinstance(l, LTTextBoxHorizontal):
-            fp.write(l.get_text().replace('-\n',''))
+            fp.write(l.get_text().replace('\n',' ').replace('- ',''))
 	    #print(l.get_text().replace('-\n','')) # オブジェクト中のtextのみ
 
 fp.close()
